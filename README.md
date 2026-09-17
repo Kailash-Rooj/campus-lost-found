@@ -2,7 +2,7 @@
 
 Campus Lost & Found is a simple website that helps students report and find lost items on campus.
 
-## What it can do
+## Features
 
 - View lost and found items
 - Add a new lost or found item
@@ -62,6 +62,8 @@ From the project folder, run:
 
 ```bash
 python -m http.server 5500 --directory frontend
+                  OR
+Alternatively, you can use the VS Code Live Server extension.
 ```
 
 Then open this address in your browser:
@@ -80,10 +82,3 @@ http://localhost:5500
 
 Make sure MongoDB is running and the backend server is started before opening the frontend.
 
-## Future improvements
-
-- User login
-- Search and filters
-- Item images
-- Admin controls
-- Automated tests
