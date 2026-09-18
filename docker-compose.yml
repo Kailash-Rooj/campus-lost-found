@@ -1,0 +1,29 @@
+services:
+
+  mongodb:
+    image: mongo:7
+    container_name: campus-mongodb
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build: ./backend
+    container_name: campus-backend
+    ports:
+      - "5000:5000"
+    environment:
+      PORT: 5000
+      MONGO_URI: mongodb://mongodb:27017/lostfound
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: ./frontend
+    container_name: campus-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+volumes:
+  mongo-data:
