@@ -7,7 +7,7 @@ services:
       - mongo-data:/data/db
 
   backend:
-    build: ./backend
+    image: kailashrooj/campus-lost-found-backend:latest
     container_name: campus-backend
     ports:
       - "5000:5000"
@@ -18,7 +18,7 @@ services:
       - mongodb
 
   frontend:
-    build: ./frontend
+    image: kailashrooj/campus-lost-found-frontend:latest
     container_name: campus-frontend
     ports:
       - "8080:80"
